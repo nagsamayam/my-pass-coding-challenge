@@ -1,0 +1,47 @@
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+
+  table {
+    border-spacing: 0;
+    width: 100%;
+
+    tr.empty-list {
+      text-align: center;
+    }
+
+    td,
+    th {
+      border: 0.5px solid #cccccc;
+      padding: 8px;
+    }
+
+    th {
+      padding: 8px;
+      text-align: left;
+      background-color: var(--primary-brand-color);
+      color: white;
+
+      &:first-child {
+        border-top-left-radius: 4px;
+      }
+
+      &:last-child {
+        border-top-right-radius: 4px;
+      }
+    }
+
+    tr:last-child {
+      td {
+        &:first-child {
+          border-bottom-left-radius: 4px;
+        }
+
+        &:last-child {
+          border-bottom-right-radius: 4px;
+        }
+      }
+    }
+  }
+}
